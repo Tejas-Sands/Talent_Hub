@@ -1,0 +1,164 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222 47% 23%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 220 14% 90%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 33% 98%;
+    --sidebar-foreground: 220 33% 20%;
+    --sidebar-primary: 222 47% 30%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 220 33% 94%;
+    --sidebar-accent-foreground: 222 47% 20%;
+    --sidebar-border: 220 33% 90%;
+    --sidebar-ring: 222 47% 45%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 222 33% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 222 33% 10%;
+    --sidebar-accent: 222 33% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 33% 20%;
+    --sidebar-ring: 222 47% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold text-navy-800;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold text-navy-800;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-semibold text-navy-700;
+  }
+
+  p {
+    @apply text-base md:text-lg text-gray-700;
+  }
+}
+
+@layer components {
+  .skill-tag {
+    @apply inline-flex items-center rounded-md bg-accent px-2.5 py-0.5 text-sm font-medium text-navy-800 ring-1 ring-inset ring-gray-200 transition-colors hover:bg-accent/80;
+  }
+
+  .nav-link {
+    @apply text-navy-800 hover:text-navy-600 px-4 py-2 text-lg font-medium transition-colors;
+  }
+
+  .active-nav-link {
+    @apply text-navy-900 font-semibold;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-navy-700 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-navy-800 focus:outline-none focus:ring-2 focus:ring-navy-500 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium text-navy-700 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50;
+  }
+
+  .input-field {
+    @apply block w-full rounded-md border-0 py-1.5 text-navy-900 shadow-sm ring-1 ring-inset ring-navy-300 placeholder:text-navy-400 focus:ring-2 focus:ring-inset focus:ring-navy-600 sm:text-sm sm:leading-6;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-card hover:shadow-card-hover border border-gray-100 overflow-hidden transition-shadow duration-300;
+  }
+
+  .profile-card {
+    @apply flex flex-col card p-6;
+  }
+
+  .job-card {
+    @apply flex flex-col card p-6;
+  }
+
+  .container-custom {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  .section {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+}
