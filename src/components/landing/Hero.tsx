@@ -25,9 +25,9 @@ const Hero = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold"
           >
-            <span className="text-zinc-100 dark:text-zinc-500">Find exceptional talent</span>
+            <span className="text-zinc-100 dark:text-slate-200">Find exceptional talent</span>
             <br />
-            <span className="text-gray-200 dark:text-gray-500">for your team</span>
+            <span className="text-gray-200 dark:text-gray-200">for your team</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}

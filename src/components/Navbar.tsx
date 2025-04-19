@@ -27,10 +27,10 @@ const Navbar: React.FC = () => {
             </Link>
             <nav className="hidden md:ml-10 md:flex md:space-x-4 dark:text-gray-300">
               <Link to="/" className={cn("nav-link", isActive("/") && "active-nav-link")}>
-                <span className="dark:text-slate-400">Talent</span>
+                <span className="dark:text-slate-200">Talent</span>
               </Link>
               <Link to="/jobs" className={cn("nav-link", isActive("/jobs") && "active-nav-link")}>
-                <span className="dark:text-slate-400">Jobs</span>
+                <span className="dark:text-slate-200">Jobs</span>
               </Link>
             </nav>
           </div>
