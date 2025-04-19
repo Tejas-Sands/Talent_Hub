@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
             </Button>
             <Button 
               variant="default" 
-              className="bg-navy-700 hover:bg-navy-800 animate-scale-in hover:scale-105 transition-transform"
+              className="bg-navy-700 hover:bg-navy-500 dark:bg-sky-500 animate-scale-in hover:scale-105 transition-transform"
               onClick={() => setIsSignInOpen(true)}
             >
               Sign In
